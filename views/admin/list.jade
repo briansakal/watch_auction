@@ -1,0 +1,12 @@
+﻿extends ../layout
+
+block content
+	h1 #{title}
+	ul
+	each doc in docs
+		li
+			a(href="/admin/#{collection}/#{doc._id}/delete") Delete
+			span x-x
+			a(href="/admin/#{collection}/#{doc._id}")= JSON.stringify(doc)
+	br
+	a(href="/admin/#{collection}/create") Add Document...

@@ -1,0 +1,15 @@
+﻿extends ../layout
+
+block content
+	h1 #{title}
+	form(method="post", action="/users/create", name="form")
+		.username
+			label Username
+			input(type="text", name="username", value="#{user.username}")
+		.password
+			label Password
+			input(type="text", name="password", value="#{user.password}")
+		.email
+			label Email
+			input(type="text", name="email", value="#{user.email}")
+		input(type="submit")
